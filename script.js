@@ -94,7 +94,7 @@ async function* fetchNFTsGenerator(walletAddress, signal) {
   }
 }
 
-function createMediaElement(mediaUrl, altText) {
+async function createMediaElement(mediaUrl, altText) {
   const fileExtension = mediaUrl.split(".").pop().toLowerCase();
   let mediaElement;
 
@@ -102,6 +102,36 @@ function createMediaElement(mediaUrl, altText) {
     mediaElement = document.createElement("video");
     mediaElement.setAttribute("controls", "");
     mediaElement.setAttribute("preload", "metadata");
+  } else if (fileExtension === "gltf") {
+    const canvas = document.createElement("canvas");
+    const renderer = new THREE.WebGLRenderer({ canvas, alpha: true });
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(
+      75,
+      canvas.width / canvas.height,
+      0.1,
+      1000
+    );
+    camera.position.z = 5;
+    const controls = new THREE.OrbitControls(camera, renderer.domElement);
+
+    const loader = new THREE.GLTFLoader();
+    try {
+      const gltf = await loader.loadAsync(mediaUrl);
+      scene.add(gltf.scene);
+    } catch (error) {
+      console.error(`Error loading GLTF: ${error.message}`);
+    }
+
+    const animate = function () {
+      requestAnimationFrame(animate);
+      renderer.render(scene, camera);
+    };
+
+    renderer.setSize(canvas.width, canvas.height);
+    animate();
+
+    mediaElement = canvas;
   } else {
     mediaElement = document.createElement("img");
     mediaElement.setAttribute("loading", "lazy"); // Add lazy loading attribute
