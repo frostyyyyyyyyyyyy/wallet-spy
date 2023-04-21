@@ -1,10 +1,9 @@
-Slightly More Entertaining Than Watching Paint Dry... And Definitely More Useful Than a Golden Pengu.
+Behold! More Entertaining Than Beholding Drynac Of Painting, And Surely More Useful Than A Golden Pengu.
 
-View your Hedera NFT collection: Enter your wallet address and behold your NFTs! No more endless searching for your precious digital art. We bring your NFTs to you faster than you can say "hash-nft.app"
+Witness the sum of thy Hedera NFT collection, or that of another: Conjoin a wallet address, and hark! Thy NFTs shall manifest themselves unto thee! Naught need thou prolong the quest for thy prized digital art, for we fetch it forthwith, swifter than the utterance of "hash-nft.app".
 
-The search function: Looking for that one special NFT that's been as elusive as a chameleon in a bag of Skittles? The search function will help you track it down quicker than a detective on amphetamines.
+The search function: Art thou in pursuit of that one elusive NFT, which resembles a chameleon concealed amongst Skittles? The search function shall expedite thy endeavor, facilitating a more rapid discovery thereof than a detective on amphetamines.
 
-Filter your NFTs: Sort your NFTs with ease! Whether you're after the rarest NFTs in your friends wallet or that one you forgot how to spell, we've got the tools to help you find what you're looking for in a jiffy.
+Filter thine NFTs: Arrange thy NFTs with ease! Whether thou dost seek the rarest NFTs in thy friend's purse or that whose spelling hath eluded thee, we doth possess the implements to accelerate thy quest and proffer what thou dost desire in the twinkling of an eye.
 
-Uhhhh... That's it.
-
+Verily, this doth conclude the matter.
