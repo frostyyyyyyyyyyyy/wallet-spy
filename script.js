@@ -163,31 +163,39 @@ async function displayNFTs() {
 
   nftGrid.innerHTML = "";
   nfts = [];
+  const displayedNftUniqueKeys = new Set(); // Create a set to store unique NFT keys (id|serial)
+
   try {
     const nftGenerator = fetchNFTsGenerator(walletAddress);
     for await (const nft of nftGenerator) {
-      nfts.push(nft);
-      const nftElement = document.createElement("div");
-      nftElement.classList.add("nft");
+      const uniqueKey = `${nft.id}|${nft.serial}`; // Create a unique key using the token ID and serial number
 
-      const mediaElement = createMediaElement(nft.image, nft.name);
+      if (!displayedNftUniqueKeys.has(uniqueKey)) { // Check if the unique key is not already displayed
+        displayedNftUniqueKeys.add(uniqueKey); // Add the unique key to the set
+        nfts.push(nft);
+        const nftElement = document.createElement("div");
+        nftElement.classList.add("nft");
 
-      const titleElement = document.createElement("h3");
-      titleElement.textContent = nft.name;
+        const mediaElement = createMediaElement(nft.image, nft.name);
 
-      const serialNumberElement = document.createElement("p");
-      serialNumberElement.textContent = `#${nft.serial}`;
+        const titleElement = document.createElement("h3");
+        titleElement.textContent = nft.name;
 
-      nftElement.appendChild(mediaElement);
-      nftElement.appendChild(titleElement);
-      nftElement.appendChild(serialNumberElement);
+        const serialNumberElement = document.createElement("p");
+        serialNumberElement.textContent = `#${nft.serial}`;
 
-      nftGrid.appendChild(nftElement);
+        nftElement.appendChild(mediaElement);
+        nftElement.appendChild(titleElement);
+        nftElement.appendChild(serialNumberElement);
+
+        nftGrid.appendChild(nftElement);
+      }
     }
   } catch (error) {
     alert(`Error fetching NFTs: ${error.message}`);
   }
 }
+
 
 viewNFTsButton.addEventListener("click", () => {
   displayNFTs().catch((error) => {
