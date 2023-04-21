@@ -1,0 +1,138 @@
+html {
+  min-height: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(249, 222, 241),
+    rgb(201, 232, 255)
+  );
+  background-color: rgb(249, 222, 241);
+}
+body {
+  font-family: Arial, sans-serif;
+
+  min-height: 100%;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+.logoContainer{
+ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+
+}
+#logo {
+    width: 150px;
+
+}
+
+.container {
+  margin-top: 10px;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 5%;
+
+  max-width: 100%;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+input {
+  padding: 10px;
+  margin-right: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+button {
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+button:hover {
+  background-color: rgba(156, 156, 156, 0.7);
+}
+
+.nft-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-gap: 10px;
+  margin-top: 20px;
+}
+
+.nft {
+  padding: 8px;
+  background-color: rgba(255, 255, 255, 0.139);
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.nft img,
+.nft video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 5px;
+}
+
+.nft h3 {
+  margin-top: 10px;
+  color: #333;
+  font-size: 16px;
+}
+
+.nft p {
+  color: #333;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.address-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+#walletAddress {
+  width: 250px;
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+#searchNFTs {
+  width: 350px;
+  max-width: 100%;
+  margin-bottom: 10px;
+}
