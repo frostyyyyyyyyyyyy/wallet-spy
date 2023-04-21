@@ -1,4 +1,4 @@
-Slightly More Entertaining Than Watching Paint Dry... And more useful than a golden pengu.
+Slightly More Entertaining Than Watching Paint Dry... And definitely more useful than a golden pengu.
 
 View your Hedera NFT collection: Enter your wallet address and behold your NFTs! No more endless searching for your precious digital art. We bring your NFTs to you faster than you can say "hash-nft.app"
 
